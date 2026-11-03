@@ -1,4 +1,5 @@
 #!/bin/bash
+cd "${0%/*}" || exit 1
 VILLE="${1:-Toulouse}"
 
 curl -s "wttr.in/${VILLE}?T&m" -o meteo_brut.txt
