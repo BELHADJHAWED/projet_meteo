@@ -12,6 +12,12 @@ ACTUELLE=$(grep -oE '[-+]?[0-9]+(\([-0-9]+\))? °C' meteo_brut.txt | head -n 1 |
 # La 7e température trouvée = demain à midi
 DEMAIN=$(grep -oE '[-+]?[0-9]+(\([-0-9]+\))? °C' meteo_brut.txt | head -n 7 | tail -n 1 | cut -d' ' -f1 | cut -d'(' -f1 | tr -d '+')
 
-# Test provisoire (on le remplacera à l'étape 4)
-echo "Température actuelle : ${ACTUELLE}°C"
-echo "Prévision demain (midi) : ${DEMAIN}°C"
+# Version 1 - Etape 3 : mise en forme lisible
+echo "===== Météo pour ${VILLE} ====="
+echo "Température actuelle       : ${ACTUELLE}°C"
+echo "Prévision de demain (midi) : ${DEMAIN}°C"
+echo "================================"
+
+# Phrase courte, préparée pour l'étape 4
+RESUME="${VILLE} : ${ACTUELLE}°C - ${DEMAIN}°C"
+echo "Résumé : ${RESUME}"
