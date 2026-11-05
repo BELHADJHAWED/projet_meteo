@@ -28,3 +28,8 @@ DATE=$(date +%Y-%m-%d)
 HEURE=$(date +%H:%M)
 
 echo "${DATE} - ${HEURE} - ${RESUME}" >> meteo.txt
+
+if [ "$ARCHIVE" = 1 ]; then
+    echo "${DATE} - ${HEURE} - ${RESUME}" >> "meteo_$(date +%Y%m%d).txt"
+    echo "Relevé archivé dans meteo_$(date +%Y%m%d).txt"
+fi
