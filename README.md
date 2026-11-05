@@ -29,3 +29,17 @@ Format : `AAAA-MM-JJ - HH:MM - Ville : Température actuelle - Prévision`
 ## Versions
 - v1.0 : script de base
 - v2.0 : ville par défaut + cron
+- v3.0 : historique (un fichier par jour)
+
+## Historique (V3)
+
+Avec l'option `-a`, le relevé est aussi enregistré dans un fichier du
+jour `meteo_AAAAMMJJ.txt` (ex : `meteo_20261105.txt`). Chaque exécution
+ajoute une ligne à la fin du fichier de la journée, et le lendemain un
+nouveau fichier est créé.
+
+    ./Extracteur_Météo.sh -a          # Toulouse, avec archivage
+    ./Extracteur_Météo.sh -a Paris    # Paris, avec archivage
+
+Attention, `-a` doit être mis avant la ville. Pour l'utiliser avec cron
+il suffit de rajouter `-a` dans la commande.
