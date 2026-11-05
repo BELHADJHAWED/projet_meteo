@@ -43,3 +43,22 @@ nouveau fichier est créé.
 
 Attention, `-a` doit être mis avant la ville. Pour l'utiliser avec cron
 il suffit de rajouter `-a` dans la commande.
+
+## Équipe
+
+- Hawed Belhadj
+- Kiara Nguedam Dusautoir
+- Benjamin Pons
+- Ismail Ourici
+- Mahamat Mahamat Ibni
+
+## Prérequis
+
+- Un terminal Bash (sous Windows : **Git Bash** ou WSL)
+- `curl` (inclus dans Git Bash)
+- Git
+
+
+
+**Attention : le chemin `/mnt/c/Users/HP/projet_meteo` est un exemple.
+Il faut le remplacer par l'emplacement de votre propre dossier.**
